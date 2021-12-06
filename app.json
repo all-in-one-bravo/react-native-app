@@ -5,7 +5,12 @@
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
-    ]
+    ],
+    "splash": {
+      "image": "./asset/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#000000"
+    }
   },
   "name": "react-native-app"
 }

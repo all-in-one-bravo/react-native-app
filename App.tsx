@@ -1,9 +1,10 @@
-import {StatusBar} from 'expo-status-bar';
-import React from 'react';
-import {Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import logo from './asset/logo.png';
 import * as ImagePicker from 'expo-image-picker';
 import * as Sharing from 'expo-sharing';
+import {StatusBar} from 'expo-status-bar';
+
+import React from 'react';
+import {Button, Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
+import logo from './asset/logo.png';
 
 export default function App() {
   const [selectedImage, setSelectedImage] = React.useState(null);
@@ -39,9 +40,7 @@ export default function App() {
     if (selectedImage !== null) {
       return <View>
         <Image source={{uri: selectedImage.localUri}} style={styles.thumbnail}/>
-        <TouchableOpacity onPress={openShareDialogAsync} style={styles.button}>
-          <Text style={styles.buttonText}>Share this photo</Text>
-        </TouchableOpacity>
+        <Button title="Share this photo" onPress={openShareDialogAsync}/>
       </View>
     } else {
       return <Image source={logo} style={styles.logo}/>
