@@ -4,7 +4,7 @@ import {StatusBar} from 'expo-status-bar';
 
 import React from 'react';
 import {Button, Image, StyleSheet, Text, TouchableOpacity, View} from 'react-native';
-import logo from './asset/logo.png';
+import logo from './assets/logo.png';
 
 export default function App() {
   const [selectedImage, setSelectedImage] = React.useState(null);
