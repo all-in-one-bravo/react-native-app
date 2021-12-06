@@ -1,13 +1,17 @@
-import { StatusBar } from 'expo-status-bar';
+import {StatusBar} from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import {Image, StyleSheet, Text, View} from 'react-native';
+import logo from './asset/logo.png';
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+      <View style={styles.container}>
+        <Image source={logo} style={styles.logo} />
+        <Text style={styles.instructions}>
+          To share a photo from your phone with a friend, just press the button below!
+        </Text>
+        <StatusBar style="auto"/>
+      </View>
   );
 }
 
@@ -17,5 +21,15 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
+  },
+  logo: {
+    width: 305,
+    height: 159,
+    marginBottom: 10,
+  },
+  instructions: {
+    color: '#888',
+    fontSize: 18,
+    marginHorizontal: 15,
   },
 });
